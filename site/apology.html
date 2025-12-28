@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apology for My Love</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 40px 0;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #f8e1e7, #e8d5e8, #f5f5dc);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* ---------- Container ---------- */
+.container {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+
+/* ---------- Envelope ---------- */
+.envelope {
+    width: 320px;
+    cursor: pointer;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.6s ease;
+    margin: 0 auto;
+}
+
+.envelope-img {
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+/* ---------- Text on Envelope ---------- */
+.envelope-text {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 22px;
+    color: #8b5a8b;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 6px 14px;
+    border-radius: 14px;
+}
+
+/* ---------- Float Animation ---------- */
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ---------- Letter ---------- */
+.letter {
+    display: none;
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    font-size: 20px;
+    line-height: 1.6;
+
+    /* ADD THIS LINE */
+    animation: fadeIn 0.8s ease;
+}
+
+/* ADD THIS BELOW */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Photos ---------- */
+.photos {
+    display: none;
+    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+
+.photo {
+    display: inline-block;
+    width: 180px;
+    margin: 15px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: pop 1s forwards;
+}
+
+.photo img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.photo-caption {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* ---------- Pop Animation ---------- */
+@keyframes pop {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ---------- Question ---------- */
+.question {
+    display: none;
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+button {
+    background: #f8e1e7;
+    border: none;
+    padding: 12px 26px;
+    margin: 10px;
+    border-radius: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e8d5e8;
+}
+
+/* ---------- Final Message ---------- */
+.message {
+    display: none;
+    margin-top: 40px;
+    font-size: 26px;
+    color: #8b5a8b;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .envelope {
+        width: 260px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="envelope" id="envelope">
+        <img src="envelop.png.webp" class="envelope-img" alt="Envelope">
+        <div class="envelope-text">
+            Meri payari Ritika 💌<br>
+            Click to open
+        </div>
+    </div>
+
+    <div class="letter" id="letter">
+        Meri payari Ritika,<br><br>
+        Mujhe malum ha ki mai galat hu maine galti kyia ha but aisanahi ha ki mai isko sudharna nahi chahata.
+        maine jabse tumhare sath aaya hu relationship mai tab se mai ne apne mai bahut kuch change kyia ha aur mai isko bhi change kr lunga .<br><br>
+        please mujhe maaf kr do mai aage se ye galti dubara anhi karne ka kosis karunga aur please tum naraz mat hona please.<br><br>
+        chota sa ye krne ka kosis kyia ha malum ha ki ye kafi nahi ha but please mere ko maaf kr doo please,<br>
+        "Ak choti si duniya ha meri aur mai iss ko nahi khona chaata hu thora late hua but please maaf kr do " ❤️
+    </div>
+
+    <div class="photos" id="photos">
+
+    <div class="photo">
+        <img src="image1.jpg" alt="Memory 1">
+        <div class="photo-caption">Our first smile together 🤍</div>
+    </div>
+
+    <div class="photo">
+        <img src="image2.png" alt="Memory 2">
+        <div class="photo-caption">A moment I’ll never forget 💖</div>
+    </div>
+
+    <div class="photo">
+        <img src="image3.webp" alt="Memory 3">
+        <div class="photo-caption">You & me 🫶</div>
+    </div>
+
+    <div class="photo">
+        <img src="image4.jpg" alt="Memory 4">
+        <div class="photo-caption">My favorite memory 💫</div>
+    </div>
+
+    <div class="photo">
+        <img src="image5.jpg" alt="Memory 5">
+        <div class="photo-caption">Forever us 💍</div>
+    </div>
+
+    <div class="photo">
+        <img src="image6.jpg" alt="Memory 6">
+        <div class="photo-caption">Always my love ❤️</div>
+    </div>
+
+</div>
+
+
+    <div class="question" id="question">
+        Can you forgive me?<br>
+        <button id="yes">Yes ❤️</button>
+        <button id="think">Let me think 🤍</button>
+    </div>
+
+    <div class="message" id="message">
+        Thank you… I promise to be better 💖
+    </div>
+</div>
+
+<script>
+const envelope = document.getElementById('envelope');
+const letter = document.getElementById('letter');
+const photos = document.getElementById('photos');
+const question = document.getElementById('question');
+const message = document.getElementById('message');
+
+document.getElementById('yes').onclick = () => {
+    question.style.display = 'none';
+    message.style.display = 'block';
+};
+
+document.getElementById('think').onclick = () => {
+    alert("Take your time, my love. I'll wait ❤️");
+};
+
+envelope.onclick = () => {
+    envelope.style.transform = 'scale(0.7) rotateY(180deg)';
+    setTimeout(() => {
+        envelope.style.display = 'none';
+        letter.style.display = 'block';
+
+        letter.scrollIntoView({ behavior: "smooth" });
+
+        setTimeout(() => {
+            photos.style.display = 'grid';
+            setTimeout(() => {
+                question.style.display = 'block';
+            }, 1500);
+        }, 1500);
+    }, 500);
+};
+</script>
+
+</body>
+</html>
